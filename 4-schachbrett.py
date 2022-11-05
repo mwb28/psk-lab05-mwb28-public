@@ -18,6 +18,7 @@ brett = leere_grafik()
 for i in range(4):
     linie1 = neben(linie1, neben(rechteck_braun,rechteck_schwarz))
     linie2 =neben(linie2, neben(rechteck_schwarz,rechteck_braun))
+for i in range(4):
     brett= ueber(brett, ueber(linie1,linie2))
 
 zeige_grafik(brett)
