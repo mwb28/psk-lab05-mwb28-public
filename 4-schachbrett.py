@@ -12,19 +12,29 @@ brett = leere_grafik()
 rechteck_braun = rechteck(GROESSE,GROESSE,WEISS)
 rechteck_schwarz = rechteck(GROESSE,GROESSE,SCHWARZ)
 
-zwei_splatenA= neben(rechteck_braun,rechteck_schwarz)
-vier_spaltenA = neben(zwei_splatenA,zwei_splatenA)
-acht_spaltenA = neben(vier_spaltenA,vier_spaltenA)
+linie1 = leere_grafik()
+linie2 = leere_grafik()
+brett = leere_grafik()
+for i in range(4):
+    linie1 = neben(linie1, neben(rechteck_braun,rechteck_schwarz))
+    linie2 =neben(linie2, neben(rechteck_schwarz,rechteck_braun))
+    brett= ueber(brett, ueber(linie1,linie2))
 
-zwei_spaltenB= neben(rechteck_schwarz,rechteck_braun)
-zwei_spaltenB = neben(zwei_spaltenB,zwei_spaltenB)
-acht_spaltenB = neben(zwei_spaltenB,zwei_spaltenB)
+zeige_grafik(brett)
 
-zwei_zeilen= ueber(acht_spaltenA,acht_spaltenB)
-vier_spalten = ueber(zwei_zeilen,zwei_zeilen)
+# zwei_spaltenA= neben(rechteck_braun,rechteck_schwarz)
+# vier_spaltenA = neben(zwei_spaltenA,zwei_spaltenA)
+# acht_spaltenA = neben(vier_spaltenA,vier_spaltenA)
+
+# zwei_spaltenB= neben(rechteck_schwarz,rechteck_braun)
+# vier_spaltenB = neben(zwei_spaltenB,zwei_spaltenB)
+# acht_spaltenB = neben(vier_spaltenB,vier_spaltenB)
+
+# zwei_zeilen= ueber(acht_spaltenA,acht_spaltenB)
+# vier_spalten = ueber(zwei_zeilen,zwei_zeilen)
 
 
-zeige_grafik(ueber(vier_spalten,vier_spalten))
+# zeige_grafik(ueber(vier_spalten,vier_spalten))
 
 
 
