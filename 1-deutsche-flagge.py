@@ -10,4 +10,7 @@ HOEHE = BREITE * 3 // 5
 FARBEN = [rgb_farbe(0, 0, 0), rgb_farbe(255, 0, 0), rgb_farbe(255, 204, 00)]
 
 schwarzes_rechteck = rechteck(BREITE, HOEHE // 3, FARBEN[0])
-zeige_grafik(schwarzes_rechteck)
+rotes_rechteck = rechteck (BREITE, HOEHE//3, FARBEN[1] )
+goldenes_rechteck = rechteck (BREITE, HOEHE//3, FARBEN[2] )
+
+zeige_grafik(ueber(schwarzes_rechteck, ueber(rotes_rechteck,goldenes_rechteck))) 
