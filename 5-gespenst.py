@@ -13,8 +13,6 @@ zeichne_zacken = leere_grafik()
 for i in range(3):
     zeichne_zacken= neben(zeichne_zacken,neben(DREIECK,DREIECK))
 
-
-
 zeige_grafik(ueber(HALBKREIS,ueber(RECHTECK,zeichne_zacken)))
 
 
