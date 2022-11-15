@@ -6,9 +6,9 @@ Speichere die Sequenz als animiertes GIF.
 
 from pytamaro.de import (Grafik, drehe, fixiere, gelb, kombiniere,
                          kreis_sektor, rechteck, schwarz, speichere_gif,
-                         ueberlagere, zeige_grafik)
+                         ueberlagere, zeige_grafik, rgb_color)
 
-PACMANCOLOR = gelb
+PACMANCOLOR = rgb_color(0,0,255)
 BACKGROUNDCOLOR = schwarz
 BACKGROUNDSQUARE = rechteck(400,400,BACKGROUNDCOLOR)
 LIST_PACMAN : Grafik = []
@@ -24,11 +24,11 @@ def erzeuge_pacman_frames(groesse: int, winkel_min: int, winkel_max: int, schrit
     list_pacman.append(ueberlagere(drehe(ausrichtung_pacman,kreis_sektor(groesse,winkel_pacman,PACMANCOLOR)),BACKGROUNDSQUARE))
   return list_pacman
 
-LIST_PACMAN = erzeuge_pacman_frames(100,15,180,50)
+LIST_PACMAN = erzeuge_pacman_frames(100,15,180,20)
 
 
 
-speichere_gif("animated_pacman", LIST_PACMAN, 40, True)
+speichere_gif("animated_pacman", LIST_PACMAN, 30, True)
 
 
 
