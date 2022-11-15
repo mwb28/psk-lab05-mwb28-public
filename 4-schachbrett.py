@@ -8,7 +8,6 @@ BRETT_GROESSE = 400
 GROESSE = BRETT_GROESSE // 8
 SCHWARZ = schwarz
 WEISS = rgb_farbe(255, 200, 120)
-brett = leere_grafik()
 rechteck_braun = rechteck(GROESSE,GROESSE,WEISS)
 rechteck_schwarz = rechteck(GROESSE,GROESSE,SCHWARZ)
 
