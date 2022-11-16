@@ -42,15 +42,3 @@ def zeichne_quadrat_reihe()->Grafik:
 
 
 zeige_grafik(zeichne_quadrat_reihe())
-
-
-# def zeichne_brett()-> Grafik:
-#     linie1 = leere_grafik()
-#     linie2 = leere_grafik()
-#     brett = leere_grafik()
-#     for i in range(4):
-#         linie1 = neben(linie1, neben(FELD_GRUEN,FELD_HELL))
-#         linie2 =neben(linie2, neben(FELD_HELL,FELD_GRUEN))
-#     for i in range(4):
-#         brett= ueber(brett, ueber(linie1,linie2))
-#     return brett
