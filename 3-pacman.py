@@ -11,7 +11,7 @@ def zeichne_pacman(groesse : int, mundwinkel : int,) -> Grafik:
     :param mundwinkel: Öffnung des Pacmanmundes in Grad
     :returns: die Grafik des Pacmans
     """
-    mundwinkel_effektiv = 360- mundwinkel
+    mundwinkel_effektiv : int = 360- mundwinkel
     return drehe(mundwinkel_effektiv/2 +180,(kreis_sektor(groesse, mundwinkel_effektiv, gelb)))
 
 

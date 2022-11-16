@@ -7,6 +7,12 @@ from pytamaro.de import rechteck, rot, weiss, drehe, ueberlagere, zeige_grafik, 
 # schreib hier Deine Lösung von Aufgabe 2
 
 def zeichne_schweizer_flagge(groesse : int)-> Grafik:
+    """
+    Erzeugt eine Grafik mit der Schweizer Fahne
+    :param groesse: groesse der Fahne in Pixel
+    :returns : die Grafik der SChweizerfahne 
+    """
+
     seite : int = groesse
     grund : int = rechteck(seite, seite, rot)
     horizontal_arm : int = rechteck(seite // 32 * 20, seite // 32 * 6, weiss)
