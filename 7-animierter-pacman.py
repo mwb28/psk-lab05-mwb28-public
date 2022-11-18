@@ -21,9 +21,7 @@ def erzeuge_pacman_frames(groesse: int, winkel_min: int, winkel_max: int, schrit
   for i in range (schritt):
     winkel_pacman :float = winkel_mindef + (winkel_schritt * i)
     ausrichtung_pacman : float = winkel_pacman/2 +180
-    list_pacman.append(
-      
-      kombiniere(fixiere("links", "mitte",drehe(ausrichtung_pacman,kreis_sektor(groesse,winkel_pacman,PACMANCOLOR))),BACKGROUNDSQUARE))
+    list_pacman.append( kombiniere(fixiere("links", "mitte",drehe(ausrichtung_pacman,kreis_sektor(groesse,winkel_pacman,PACMANCOLOR))),BACKGROUNDSQUARE))
   return list_pacman
 
 LIST_PACMAN = erzeuge_pacman_frames(100,15,180,20)
