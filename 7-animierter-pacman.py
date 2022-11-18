@@ -8,7 +8,7 @@ from pytamaro.de import (Grafik, Farbe, drehe, fixiere, gelb, kombiniere,
                          kreis_sektor, rechteck, schwarz, speichere_gif,
                          ueberlagere, zeige_grafik, rgb_color)
 
-PACMANCOLOR  : Farbe= rgb_color(0,0,255)
+PACMANCOLOR  : Farbe= rgb_color(255,255,0)
 BACKGROUNDCOLOR : Farbe = schwarz
 BACKGROUNDSQUARE : Grafik = rechteck(400,400,BACKGROUNDCOLOR)
 LIST_PACMAN : list = []
@@ -21,7 +21,9 @@ def erzeuge_pacman_frames(groesse: int, winkel_min: int, winkel_max: int, schrit
   for i in range (schritt):
     winkel_pacman :float = winkel_mindef + (winkel_schritt * i)
     ausrichtung_pacman : float = winkel_pacman/2 +180
-    list_pacman.append(ueberlagere(drehe(ausrichtung_pacman,kreis_sektor(groesse,winkel_pacman,PACMANCOLOR)),BACKGROUNDSQUARE))
+    list_pacman.append(
+      
+      kombiniere(fixiere("links", "mitte",drehe(ausrichtung_pacman,kreis_sektor(groesse,winkel_pacman,PACMANCOLOR))),BACKGROUNDSQUARE))
   return list_pacman
 
 LIST_PACMAN = erzeuge_pacman_frames(100,15,180,20)
